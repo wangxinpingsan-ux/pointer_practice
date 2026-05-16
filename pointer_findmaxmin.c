@@ -11,14 +11,12 @@ void find_maxmin(int array[], int *max, int *min)
         {
             *max = array[i];
         }
-    }
-    for (int j = 1; j < size; j++)
-    {
-        if (*min > array[j])
+         if (*min > array[i])
         {
-            *min = array[j];
+            *min = array[i];
         }
     }
+
 }
 
 int main(void)
