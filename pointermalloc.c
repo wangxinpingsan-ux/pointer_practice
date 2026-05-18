@@ -18,7 +18,7 @@ if (*ptr==0)
 for(int i =0;i<size;i++){
     
 printf("enter number");
-scanf(" %d",&ptr[i]);//&ptr[i]=&(*ptr+i)
+scanf(" %d",&ptr[i]);//&ptr[i]=&(*(ptr+i))
 
 }
 
