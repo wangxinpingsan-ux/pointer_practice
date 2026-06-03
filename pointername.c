@@ -19,18 +19,18 @@ int main(void) {
         
         name_list[i] = malloc(50 * sizeof(char)); //放字的 放入0x7000 0x8000 0x9000
         
-        printf("請輸入第 %d 個名字: ", i + 1);
+        printf("請輸入第 %d %p個名字: ", i + 1,name_list[i]);
         
         // 請問 scanf 這裡應該傳入什麼？
         // 提示：name_list[i] 本身就已經是那一串 50 格空間的第一個門牌地址了！
-        // 而且字串輸入是用 %s 
-        scanf("%s", &*name_list[i] ); //放指標(存地址的)
+        // 而且字串輸入是用 %s 喔！
+        scanf("%s", *(name_list+i) ); //放指標(存地址的)
     }
 
     printf("\n--- 名字清單 ---\n");
     for (int i = 0; i < count; i++) {
         // ❓ 請問 printf 這裡要怎麼印出第 i 個字串？
-        printf("第 %d 個名字: %s\n", i + 1, name_list[i]);//放指標(存字的)
+        printf("第 %d 個名字: %s %p\n", i + 1, *(name_list+i),*(name_list+i));//放指標(存字的)
     }
 
 
