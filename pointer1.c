@@ -4,7 +4,7 @@ int main (void){
 
 
   int a = 5;
-  int *aptr = & a;
+  int *aptr = &a;
 
 
   printf("a value = %d\n *aptr value = %d\n",a ,*aptr);//5
